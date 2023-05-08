@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>hello i am the html of a bank</title>
+        <script type="text/javascript">
+            console.log("hello i am running");
+        function assignServiceRequest(f,a){
+        f.serviceRequest.value=a;
+        }
+        function checkAccNo(f){
+        accno=f.accno.value;
+         if(accno.length<9){
+          alert("Invalid Account Number");
+         }}
+         function checkpin(f){
+         pin=f.pin.value;
+         if(pin.length<5){
+         alert("Invalid Pin number");
+          }
+           
+        }
+         function checking(f){
+         service = f.serviceRequest.value;
+         if(service==0){
+         alert("Select one of the services Balance Enquiry or Ministatement");
+           }
+          else{
+           f.submit();}
+
+         }
+         </script>
+	</head>
+	<body bgcolor="bisque" text="black">
+	<form action="bank.jsp" target="f2">
+	<pre>
+	<center>
+	<li><b><h2>Self Care Customer Service</h2></b></i>
+        <table align="center">
+		<tr>
+		   <td>Account number</td>
+		   <td><input type="text" name="accno" value="0" onblur="checkAccNo(this.form)"></td>
+		   <td><input type="radio" name="service" onclick="assignServiceRequest(this.form,'BalanceEnquiry')">Balance Enquiry</td>
+		</tr>
+		<tr>
+		   <td>PIN Number</td>
+		   <td><input type="password" name="pin" value="0" onblur="checkpin(this.form)"></td>
+		   <td><input type="radio" name="service" onclick='assignServiceRequest(this.form,"MiniStatement")'>MiniStatement</td>
+                </tr>
+        </table>
+        <input type="button" value="proceed" onclick="checking(this.form)">
+        <input type="hidden" name="serviceRequest" value="0">
+	</pre>
+        </center>
+	</form>
+	</body>
+</html>	

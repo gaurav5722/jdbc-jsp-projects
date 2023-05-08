@@ -1,0 +1,36 @@
+<!--hello friends now i am going to demonstrate simple interest calcualtion using jsp-->
+<html>
+	<head>
+		<title>hello i am going to demonstrate simple interest calculation using jsp</title>
+		<script type="text/javascript">
+        function clicking(){
+			let a=window.event.keyCode;
+			console.log('i am working');
+			if(!(a>=48&&a<=57)){
+				alert("enter the number between 0 & 9");
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<marquee>Hello i am the form to compute simple interest</marquee>
+		<form action="simple.jsp">
+			<pre>
+			<center>
+                 	<br>
+			<hr>
+
+			Enter the principal :-<input type="text" name="p" onkeypress="clicking()">
+
+ 			Enter the rate:- <input type="text" name="r" onkeypress="clicking()">
+
+			Enter the year:- <input type="text" name="y" onkeypress="clicking()">
+				
+                        <input type="submit" >
+                	<br>
+
+						</center>
+			</pre>
+		<form>
+        </body>
+</html>
